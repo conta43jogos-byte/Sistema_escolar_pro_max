@@ -1,0 +1,94 @@
+{
+  "name": "Teacher",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome completo do professor"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email do professor"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefone"
+    },
+    "subjects": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Disciplinas que leciona"
+    },
+    "weekly_hours": {
+      "type": "number",
+      "description": "Carga hor\u00e1ria semanal"
+    },
+    "max_daily_classes": {
+      "type": "number",
+      "description": "M\u00e1ximo de aulas por dia",
+      "default": 5
+    },
+    "shift_preference": {
+      "type": "string",
+      "enum": [
+        "morning",
+        "afternoon",
+        "both"
+      ],
+      "default": "both",
+      "description": "Prefer\u00eancia de turno"
+    },
+    "availability": {
+      "type": "object",
+      "description": "Disponibilidade por dia da semana",
+      "properties": {
+        "monday": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "tuesday": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "wednesday": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "thursday": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "friday": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive",
+        "on_leave"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "name",
+    "subjects",
+    "weekly_hours"
+  ]
+}

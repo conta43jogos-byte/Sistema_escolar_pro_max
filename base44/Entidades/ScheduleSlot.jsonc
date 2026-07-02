@@ -1,0 +1,64 @@
+{
+  "name": "ScheduleSlot",
+  "type": "object",
+  "properties": {
+    "class_group_id": {
+      "type": "string",
+      "description": "ID da turma"
+    },
+    "class_group_name": {
+      "type": "string"
+    },
+    "teacher_id": {
+      "type": "string",
+      "description": "ID do professor"
+    },
+    "teacher_name": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string",
+      "description": "ID da disciplina"
+    },
+    "subject_name": {
+      "type": "string"
+    },
+    "room_id": {
+      "type": "string"
+    },
+    "room_name": {
+      "type": "string"
+    },
+    "day_of_week": {
+      "type": "string",
+      "enum": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday"
+      ]
+    },
+    "period": {
+      "type": "number",
+      "description": "N\u00famero do hor\u00e1rio/per\u00edodo (1-6)"
+    },
+    "shift": {
+      "type": "string",
+      "enum": [
+        "morning",
+        "afternoon"
+      ]
+    },
+    "subject_color": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "class_group_id",
+    "teacher_id",
+    "subject_id",
+    "day_of_week",
+    "period"
+  ]
+}

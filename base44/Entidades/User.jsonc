@@ -1,0 +1,20 @@
+{
+  "name": "User",
+  "type": "object",
+  "properties": {
+    "role": {
+      "type": "string",
+      "enum": [
+        "admin",
+        "coordination",
+        "teacher",
+        "secretary"
+      ],
+      "default": "teacher"
+    },
+    "teacher_id": {
+      "type": "string",
+      "description": "Link to Teacher entity if role is teacher"
+    }
+  }
+}

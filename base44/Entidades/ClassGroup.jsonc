@@ -1,0 +1,66 @@
+{
+  "name": "ClassGroup",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome da turma (ex: 6\u00ba A)"
+    },
+    "grade": {
+      "type": "string",
+      "description": "S\u00e9rie/Ano"
+    },
+    "shift": {
+      "type": "string",
+      "enum": [
+        "morning",
+        "afternoon"
+      ],
+      "default": "morning",
+      "description": "Turno"
+    },
+    "student_count": {
+      "type": "number",
+      "description": "Quantidade de alunos"
+    },
+    "subjects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subject_id": {
+            "type": "string"
+          },
+          "subject_name": {
+            "type": "string"
+          },
+          "teacher_id": {
+            "type": "string"
+          },
+          "teacher_name": {
+            "type": "string"
+          },
+          "weekly_classes": {
+            "type": "number"
+          }
+        }
+      },
+      "description": "Disciplinas da turma com professor atribu\u00eddo"
+    },
+    "schedule_status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "generated",
+        "conflict",
+        "optimized"
+      ],
+      "default": "pending"
+    }
+  },
+  "required": [
+    "name",
+    "grade",
+    "shift"
+  ]
+}
