@@ -8,7 +8,7 @@ import { AuthProvider } from '@/lib/AuthContext';
 import ScrollToTop from '@/components/ScrollToTop';
 import AppLayout from '@/components/Layout/AppLayout';
 import ProtectedRoute from '@/components/ProtectedRoute';
-import { Toaster } from '@/components/ui/toaster';
+import { Toaster } from '@/components/ui/toaster.jsx';
 
 // Páginas de Autenticação
 import Login from '@/pages/Login';
