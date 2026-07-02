@@ -4,7 +4,7 @@ import { useAuth } from "@/lib/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { LogIn, Mail, Lock, Loader2 } from "lucide-react";
+import { GraduationCap, Mail, Lock, Loader2 } from "lucide-react";
 import AuthLayout from "@/components/AuthLayout";
 import GoogleIcon from "@/components/GoogleIcon";
 
@@ -34,9 +34,9 @@ export default function Login() {
 
   return (
     <AuthLayout
-      icon={LogIn}
-      title="Bem-vindo de volta"
-      subtitle="Faça login na sua conta"
+      icon={GraduationCap}
+      title="Sistema Escolar Pro Max"
+      subtitle="Faça login para acessar o sistema"
       footer={
         <>
           Não tem uma conta?{" "}

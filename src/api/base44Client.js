@@ -32,6 +32,12 @@ function createEntity(name) {
       if (idx > -1) { store().splice(idx, 1); save(); }
     },
     deleteMany: async () => { storage[name] = []; save(); },
+    bulkCreate: async (items) => {
+      const created = items.map(item => ({ id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), ...item }));
+      store().push(...created);
+      save();
+      return created;
+    },
   };
 }
 
